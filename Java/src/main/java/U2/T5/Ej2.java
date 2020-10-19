@@ -17,5 +17,6 @@ public class Ej2 {
             System.out.println("No has introducido el numero 12, has introducido el "+Num+".");
         }
 
+
     }
 }
