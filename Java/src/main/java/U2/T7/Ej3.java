@@ -7,7 +7,7 @@ public class Ej3 {
     public static void main ( String args[] ){
         Scanner teclado = new Scanner(System.in);
 
-        int codigoAscii = (int)Math.floor(Math.random()*(122-97)+97); /*En cao de que el aleatorio fuera 0 seria *25+97 lo que daria 97 siendo a*/
+        int codigoAscii = (int)Math.floor(Math.random()*(122-97)+97); /*En caso de que el aleatorio fuera 0 seria *25+97 lo que daria 97 siendo a*/
         char letra = (char)codigoAscii;
         System.out.print(letra);
 

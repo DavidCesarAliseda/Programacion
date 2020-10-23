@@ -13,16 +13,16 @@ public class Ej5 {
         System.out.print("Introduzca el radio de la circunferencia: ");
         int radio = teclado.nextInt();
 
-        double pi = 3.1416;
+        double pi = Math.PI;
         double diametro = 0;
         double perimetro = 0;
         double area = 0;
 
 
         System.out.println("Elija una opción:  ");
-        System.out.println("1.Calcular diámetro.");
-        System.out.println("2.Calcular perímetro.");
-        System.out.println("3.Calcular área.");
+        System.out.println(" 1.Calcular diámetro.");
+        System.out.println(" 2.Calcular perímetro.");
+        System.out.println(" 3.Calcular área.");
         int opcion = teclado.nextInt();
 
         switch (opcion) {

@@ -7,9 +7,9 @@ public class Ej4 {
     public static void main ( String args[] ){
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduzca el primer numero: ");
-        int num1 = teclado.nextInt();
+        byte num1 = teclado.nextByte();
         System.out.print("Introduzca el segundo numero: ");
-        int num2 = teclado.nextInt();
+        byte num2 = teclado.nextByte();
 
         int menor=0;
         int menor2=0;
