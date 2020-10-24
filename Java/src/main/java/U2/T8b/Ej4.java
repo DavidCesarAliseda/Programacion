@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ej4 {
     //Escribe un programa que lea una lista de diez números y determine cuántos son positivos, y cuántos son negativos.
-    public static void main ( String args[] ){
+    public static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
         int contador=0;
         int npositivos=0;

@@ -3,10 +3,10 @@ package U2.T8b;
 import java.util.Scanner;
 
 public class Piramide {
-    public static void main ( String args[] ){
-        Scanner teclado = new Scanner(System.in);
+    public static void main (String[] args){
+        Scanner sc = new Scanner(System.in);
         System.out.print("Por favor, introduzca la altura de la pirámide: ");
-        int alturaIntroducida = teclado.nextInt();
+        int alturaIntroducida = sc.nextInt();
 
         //System.out.print("Introduzca el carácter de relleno: ");
         /*String relleno = System.console().readLine();*/
