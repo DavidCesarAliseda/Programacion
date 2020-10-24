@@ -9,57 +9,51 @@ public class Ej15 {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int num = teclado.nextInt(); //Limite superior
-        int x = 0; //numero que comprueba si es primo
+        boolean flag = false;
+        int numero = 0;
+        int numero_de_primos = 0;
+        int contador =0;
         int resto = 0;
-        int num_mult = 0;
-        int contador = 0;
-        int i=1;
-
-        while(x<=num){
-            for (x=1 ; x<=num ; x++){
-                for (i=1 ; i<=x ; i++){
-
-            }
-            }
-        }System.out.print("Hay "+contador+" numeros primos");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*int contador = 0;
-        int aux = 0;
+        int raiz= 0;
         int i = 0;
-        int div = 1;
-        int resto = 0;
 
-        while(i<=num){
 
-            for (i =1 ; i <= div ; i++ ){
-                resto = i%div;
-                if (resto == 0){
-                    aux++;
-                }
-
-            }if (aux<2){
-                contador=contador;
-            }else{
+        for(numero=1 ;numero<=num ;numero++){
+            for ( raiz = (int) Math.sqrt(numero); i <=raiz ; i++) {
+            if (numero % i == 0) {
                 contador++;
             }
-        }*/
+        }if (contador <= 2){
+                numero_de_primos++;
+            }
 
+        } System.out.print(numero_de_primos);
+
+
+
+
+
+
+
+
+
+        /*int x = 0; //numero que comprueba si es primo
+        int i = 0; //numero que se comprueba si es primo
+        int resto = 0;
+        int contador_div = 0;
+        int contador = 0;
+
+        for (i=1 ; i<=num ; i++){
+            for (x=1 ; x<=i ; x++){
+                resto=i%x;
+                if (resto==0){
+                    contador_div++;
+                }
+            }
+            if (contador_div<=2){  //En este if entran todos aquellos que sean primos
+                contador++;
+            }
+        }
+        System.out.print("La cantidad de números primos es "+contador+".");*/
     }
 }
