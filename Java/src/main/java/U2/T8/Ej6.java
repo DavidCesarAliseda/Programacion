@@ -11,14 +11,9 @@ public class Ej6 {
             System.out.println(7*contador);
             contador++;
 
-
-
-
-
-
         }while (contador*7 < 100);
 
-
+        //for (contador=1; contador*7<100; contador++) lo mismo pero con for
 
     }
 }

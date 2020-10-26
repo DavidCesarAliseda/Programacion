@@ -14,7 +14,6 @@ public class Ej4 {
         int longitud = frasecaracter.length;
         int centro = longitud/2;
 
-        if (frase.charAt(1)){
 
         }
 
@@ -24,4 +23,4 @@ public class Ej4 {
     }
 
 
-}
+

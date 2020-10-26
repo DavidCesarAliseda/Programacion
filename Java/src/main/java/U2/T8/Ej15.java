@@ -5,21 +5,30 @@ import java.util.Scanner;
 public class Ej15 {
     /*Realizar un programa que nos pida un número n, y nos diga cuantos números hay entre 1 y n que sean primos.
      Un número primo es aquel que sólo es divisible por 1 y por él mismo. Ejemplo: Para n=8:*/
-    public static void main ( String args[] ){
+    public static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int num = teclado.nextInt(); //Limite superior
-        boolean flag = false;
-        int numero = 0;
-        int numero_de_primos = 0;
-        int contador =0;
-        int resto = 0;
-        int raiz= 0;
         int i = 0;
+        boolean es_primo = true;
+        int j=0;
+        int contador=0;
 
 
-        for(numero=1 ;numero<=num ;numero++){
-            for ( raiz = (int) Math.sqrt(numero); i <=raiz ; i++) {
+        for(j=2; j<=num; j++) {              //Recorre desde 1 hasta n
+            for (i = 2; i <= num - 1; i++) {   //encontrar un numero primo para un numero concreto
+                if (num % i == 0) {
+                    es_primo = false;
+                    break;
+                }
+            }if(es_primo){
+                contador++;
+            }
+        }System.out.print("Hay "+contador+" numeros primos.");
+
+
+
+        /*for(numero=2 ;numero<=num-1 ;numero++){
             if (numero % i == 0) {
                 contador++;
             }
@@ -27,7 +36,7 @@ public class Ej15 {
                 numero_de_primos++;
             }
 
-        } System.out.print(numero_de_primos);
+        } System.out.print(numero_de_primos);*/
 
 
 
