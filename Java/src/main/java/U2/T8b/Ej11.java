@@ -7,36 +7,25 @@ public class Ej11 {
     Se debe comprobar que la altura sea un número impar mayor o igual a 3, en caso contrario se debe mostrar un mensaje de error.*/
     public static void main (String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce la altura ");
-        int altura = sc.nextInt();
-        int mitad = altura/2+1;
-        int aux = 0;
-        int ancho = 0;
-        int contador = 0;
-        if (altura>3 && altura%2!=0){
-
-            while (contador<=altura){
-                for(ancho=0; (ancho) <= altura; ancho++){
-                    System.out.print(" ");
-
-
-
-
-
-
-                }
-                System.out.println("*");
-
-            contador++;
-            altura=altura-2;
+        int altura=0;
+        int fila = 0;int columna = 0;
+        do {
+            System.out.println("Introduzca la altura: ");
+            altura = sc.nextInt();
+            if (altura%2==0 || altura <=3){
+                System.out.println("Error, la altura debe ser impar y mayor que 3. ");
             }
+        }while (altura%2==0 || altura <=3);
 
-
-        }else{
-            System.out.println("Error. ");
+        for (fila=1; fila<=altura; fila++){
+            for (columna=1; columna<=altura; columna++){
+                if(fila == columna || fila + columna == altura + 1 ){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }System.out.println(" ");
         }
-
-
 
     }
 

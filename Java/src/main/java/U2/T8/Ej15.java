@@ -8,61 +8,23 @@ public class Ej15 {
     public static void main (String[] args){
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduce un número: ");
-        int num = teclado.nextInt(); //Limite superior
-        int i = 0;
+        int n = teclado.nextInt(); //Limite superior
+        int contador_primos = 0;
+        int num = 0;
         boolean es_primo = true;
-        int j=0;
-        int contador=0;
 
+        int i = 0;
 
-        for(j=2; j<=num; j++) {              //Recorre desde 1 hasta n
-            for (i = 2; i <= num - 1; i++) {   //encontrar un numero primo para un numero concreto
+        for(num = 1; num<=n; num++) {//Recorre desde 1 hasta n
+            es_primo = true;
+            for (i = 2; i < num ; i++) {   //encontrar un numero primo para un numero concreto
                 if (num % i == 0) {
                     es_primo = false;
                     break;
                 }
             }if(es_primo){
-                contador++;
+                contador_primos++;
             }
-        }System.out.print("Hay "+contador+" numeros primos.");
-
-
-
-        /*for(numero=2 ;numero<=num-1 ;numero++){
-            if (numero % i == 0) {
-                contador++;
-            }
-        }if (contador <= 2){
-                numero_de_primos++;
-            }
-
-        } System.out.print(numero_de_primos);*/
-
-
-
-
-
-
-
-
-
-        /*int x = 0; //numero que comprueba si es primo
-        int i = 0; //numero que se comprueba si es primo
-        int resto = 0;
-        int contador_div = 0;
-        int contador = 0;
-
-        for (i=1 ; i<=num ; i++){
-            for (x=1 ; x<=i ; x++){
-                resto=i%x;
-                if (resto==0){
-                    contador_div++;
-                }
-            }
-            if (contador_div<=2){  //En este if entran todos aquellos que sean primos
-                contador++;
-            }
-        }
-        System.out.print("La cantidad de números primos es "+contador+".");*/
+        }System.out.print("Hay "+contador_primos+" numeros primos.");
     }
 }
