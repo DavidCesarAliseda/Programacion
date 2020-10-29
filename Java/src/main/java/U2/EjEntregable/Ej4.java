@@ -26,8 +26,8 @@ public class Ej4 {
 
         System.out.println("*     *");
 
-        for (int i = altura/2+2; i<=altura; i++){
-            for (int j = 0; j<=1+(altura-1)/2; j++){
+        for (int i = 1; i<=altura; i++){
+            for (int j = 0; j<=altura/2; j++){
                 if(i-j==3){
                     System.out.print("*     *");
                 }else {
