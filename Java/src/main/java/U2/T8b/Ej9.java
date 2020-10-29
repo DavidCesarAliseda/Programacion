@@ -16,7 +16,7 @@ public class Ej9 {
         for(contador_alt=1; contador_alt<=altura-1; contador_alt++){
             System.out.println("*");
         }
-        for(contador_base=1; contador_base<=base; contador_base++){
+        for(contador_base=0; contador_base<=base; contador_base++){
             System.out.print("*");
         }
 

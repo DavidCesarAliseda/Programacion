@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Ej1 {
     //Crea un programa en Java que escriba en pantalla el producto de dos números prefijados.
 
-    public static void main( String args[] ) {
+    public static void main(String[] args) {
 
        Scanner teclado = new Scanner(System.in);
        System.out.print( "Introduzca el primer número: ");

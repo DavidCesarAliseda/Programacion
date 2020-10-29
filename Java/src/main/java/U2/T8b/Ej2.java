@@ -16,21 +16,12 @@ public class Ej2 {
             cuadrado = contador*contador;
             cubo=cuadrado*contador;
 
-            if (contador>=10){
+
                 System.out.print(contador+"  "+cuadrado+"  "+cubo+"\n");
-            }else {
-                System.out.print(contador + "   " + cuadrado + "   " + cubo + "\n");
-            }
         }
-
-
-
-
-
-
-
     }
-
-
-
 }
+
+
+
+

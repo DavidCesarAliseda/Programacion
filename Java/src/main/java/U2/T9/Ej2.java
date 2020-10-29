@@ -12,20 +12,18 @@ public class Ej2 {
         System.out.print("Introduce la contraseña ");
         contrasena = sc.nextLine();
 
-        char[] contrasenacaracter = contrasena.toCharArray();
-        int longitud = contrasenacaracter.length;
-
-        System.out.print("La primera letra es "+contrasena.charAt(1));
-        System.out.print("La untima letra es "+contrasena.charAt(longitud));
-        System.out.print("Hay "+longitud+" letras.");
-
-        System.out.print("Intenta adivinarla");
+        System.out.println("La longitud de la contraseña es "+contrasena.length());
+        System.out.println("La primera letra es "+contrasena.charAt(0));
+        System.out.println("La ultima letra es "+contrasena.charAt(contrasena.length()-1));
+        System.out.print("Intenta acertar la contraseña: ");
         adivina = sc.nextLine();
 
-        if(adivina.equals(contrasena)){
-            System.out.print("Acertaste");
-        }else{
-            System.out.print("Fallaste");
+        if(contrasena.equals(adivina)) {
+            System.out.println("Acertaste");
+        }else {
+            System.out.println("Fallaste");
         }
+
+
     }
 }
