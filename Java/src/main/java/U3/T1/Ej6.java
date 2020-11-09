@@ -23,7 +23,7 @@ public class Ej6 {
 
         if (mayus.equals("A") || mayus.equals("E") || mayus.equals("I") || mayus.equals("O") || mayus.equals("U")
                 || mayus.equals("á") || mayus.equals("é") || mayus.equals("í") || mayus.equals("ó") || mayus.equals("ú")
-                /*|| mayus.equals("Á") || mayus.equals("É") || mayus.equals("Í") || mayus.equals("Ó") || mayus.equals("Ú")*/) {
+                /*|| mayus.equals("") || mayus.equals("") || mayus.equals("") || mayus.equals("") || mayus.equals("")*/) {
             flag = true;
         } else {
             flag = false;
