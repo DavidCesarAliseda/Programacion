@@ -7,13 +7,13 @@ public class Ej12 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduzca un número: ");
-        int n = teclado.nextInt();
+        long n = teclado.nextInt();
         System.out.println("El factorial de "+n+" es "+factorial(n));
 
     }
 
-    public static int factorial(int n) {
-        int resultado = 1;
+    public static long factorial(long n) {
+        long resultado = 1;
 
         if (n == 0) {
             return resultado;                      //si n=0 resultado es 1 que es multiplicado por el resto del factorial
