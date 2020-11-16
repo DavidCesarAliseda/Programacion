@@ -12,7 +12,7 @@ public class Ej11 {
         int n = teclado.nextInt();
 
         System.out.println(a+" elevado a "+n+" es "+exponencial(a, n));
-        System.out.println(a+" elevado a "+n+" es "+exp_iterativa(a, n));
+        System.out.println(a+" elevado a "+n+" es "+exp_recursiva(a, n));
 
     }
 
@@ -24,11 +24,18 @@ public class Ej11 {
         }
         return resultado;
     }
-    public static double exp_iterativa(double a, int n){
+    public static double exp_recursiva(double a, int n){
         double resultado=a;
+        /*
+        if(n==1){    Caso base
+            return a;
+        }else{
+            resultado = a * exp_recursiva(a, n - 1);
+        }
+        */
         int contador=1;
         if (contador < n) {
-            resultado = a * exp_iterativa(a, n - 1);
+            resultado = a * exp_recursiva(a, n - 1);
             contador++;
         }
         return resultado;

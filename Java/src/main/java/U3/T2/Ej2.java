@@ -12,7 +12,7 @@ public class Ej2 {
         int contadorespacios=0;
 
         for(int i=0; i< frase.length(); i++){
-            if (frase.charAt(i)==' '){
+            if (frase.charAt(i)==' '){ //caracter tipo char y character siempre con comillas simple
                 contadorespacios++;
             }
         }

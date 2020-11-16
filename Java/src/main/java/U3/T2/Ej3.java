@@ -24,7 +24,7 @@ public class Ej3 {
 
     static boolean esVocal(char c) {
         boolean resultado;
-        String vocales = "aeiou";
+        String vocales = "aeiouáéíóú";
         c=Character.toLowerCase(c);
 
         if(vocales.indexOf(c) == -1) {
