@@ -18,8 +18,7 @@ public class Ej12 {
         if (n == 0) {
             return resultado;                      //si n=0 resultado es 1 que es multiplicado por el resto del factorial
         } else {
-            resultado = n * factorial(n - 1);   //hace el factorial normal hasta llegar a n-1=0
-            return resultado;
+            return n * factorial(n - 1);   //hace el factorial normal hasta llegar a n-1=0
         }
     }
 }
