@@ -46,13 +46,13 @@ public class Ej4 {
 
         for (int i = 0; i < intento.length; i++) {
             j=i;
-                if (intento[i]<clave[j]){
+            if (intento[i]<clave[j]){
                     System.out.println(intento[i]+" es menor.");
-                }else if (intento[i]>clave[j]){
+            }else if (intento[i]>clave[j]){
                     System.out.println(intento[i]+" es mayor.");
-                }else{
+            }else{
                     System.out.println(intento[i]+" es igual.");
-                }
+            }
         }
     }
     //Compara uno a uno el contenido del array, y si las igualdades es igual a la longitud del array devuelve true
