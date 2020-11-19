@@ -22,6 +22,7 @@ public class Ej7 {
                 notas[j][i] = teclado.nextInt();
             }
         }
+        System.out.println(Arrays.deepToString(notas));
 
 
         /*System.out.print("Introduce las notas del primer trimestre. ");

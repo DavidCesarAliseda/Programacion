@@ -41,7 +41,7 @@ public class Ej4 {
         }
     }
     //Compara cada valor de forma independiente
-    public static void comparador_cada_valor_array(int[] clave, int[] intento) {
+    public static void comparador_cada_valor_array (int[] clave, int[] intento) {
         int j = 0;
 
         for (int i = 0; i < intento.length; i++) {

@@ -25,7 +25,7 @@ public class Ej5 {
 
         Arrays.sort(serie1);
         Arrays.sort(serie2);
-        fusion_arrays(serie1, serie2, fusion);
+        fusion_ordenada_arrays(serie1, serie2, fusion);
 
         System.out.println("\n");
         System.out.println("La primera serie es "+Arrays.toString(serie1));
@@ -33,7 +33,7 @@ public class Ej5 {
         System.out.println("El resultado de la fusión es "+Arrays.toString(fusion));
 
     }
-    public static void fusion_arrays (int[]serie1, int[]serie2, int[]fusion) {
+    public static void fusion_ordenada_arrays (int[]serie1, int[]serie2, int[]fusion) {
         int indice1 = 0;
         int indice2 = 0;
         int indicef = 0;
@@ -65,13 +65,6 @@ public class Ej5 {
         }
 
 
-
-
-
-
-
-
-
         /*for (int i = 0; i < fusion.length; i++) {
 
             if (serie1[indice1] <= serie2[indice2]) {
@@ -81,17 +74,15 @@ public class Ej5 {
                 fusion[i] = serie2[indice2];
                 indice2++;
             }
-            if (indice1 == serie1.length) {
-                for (int j = 0; j < serie2.length; j++) {
-                    fusion[i] = serie2[indice2];
-                    indice2++;
+            if (indice1 == serie1.length && indice2 != serie2.length) {
+                for (int j = indice1; j < serie2.length; j++) {
+                    fusion[i] = serie2[j];
                     i++;
                 }
             }
-            if (indice2 == serie2.length) {
+            else if (indice2 == serie2.length && indice1 != serie1.length)  {
                 for (int j = 0; j < serie1.length; j++) {
-                    fusion[i] = serie1[indice1];
-                    indice1++;
+                    fusion[i] = serie1[j];
                     i++;
                 }
 
