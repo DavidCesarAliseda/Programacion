@@ -14,8 +14,10 @@ public class Ej8 {
     }
     public static boolean es_primo(int n) {
         boolean primo = true;
-
-        for (int i = 2; i < n; i++) {
+        if (n == 1 || n==0){
+            primo = false;
+        }
+        for (int i = 2; i <= n-1; i++) {
             if (n % i == 0) {
                 primo = false;
                 break;
@@ -26,7 +28,6 @@ public class Ej8 {
 
     public static int divisores_primos (int n){
         int contador_div_primos = 0;
-
         // Comprobamos todos los divisores de n
         for (int i = 1; i <= n; i++){
             // Si encontramos un divisor y es primo, incrementa el contador

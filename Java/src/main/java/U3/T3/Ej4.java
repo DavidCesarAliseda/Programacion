@@ -23,7 +23,7 @@ public class Ej4 {
         }
         //Recoge array de longitud n y contenido introducido por el usuario
         for (int i = 0; i < intento.length; i++) {
-            System.out.print("Intenta acertarla: ");
+            System.out.print("Intenta acertar el dato "+(i+1)+":");
             int num = teclado.nextInt();
             intento[i]=num;
         }
@@ -31,7 +31,7 @@ public class Ej4 {
         while(!array_es_igual(clave, intento, n)){
             comparador_cada_valor_array(clave, intento);
             for (int i = 0; i < intento.length; i++) {
-                System.out.print("Vuelve a intentarlo: ");
+                System.out.print("Vuelve a intentarlo, introduce el dato "+(i+1)+":");
                 int num = teclado.nextInt();
                 intento[i]=num;
             }
@@ -57,20 +57,16 @@ public class Ej4 {
     }
     //Compara uno a uno el contenido del array, y si las igualdades es igual a la longitud del array devuelve true
     public static boolean array_es_igual(int[] clave, int[] intento, int n) {
-        boolean es_igual = false;
+        boolean es_igual = true;
         int contador_igualdades = 0;
 
         for (int i = 0; i < intento.length; i++) {
             int j = i;
-            if (intento[i]==clave[j]){
-                contador_igualdades++;
+            if (intento[i]!=clave[j]){
+                es_igual=false;
             }
         }
-        if (contador_igualdades== intento.length){
-            es_igual=true;
-        }else {
-            es_igual=false;
-        }
+
         return es_igual;
     }
 }
