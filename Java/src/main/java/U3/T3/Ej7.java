@@ -11,7 +11,7 @@ public class Ej7 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int x = 5; //alumnos
-        int y = 3; //nº trimestre
+        int y = 3; // nº trimestre
 
         int notas[][];
         notas = new int [x][y];
