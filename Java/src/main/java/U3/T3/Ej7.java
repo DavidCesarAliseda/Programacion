@@ -14,11 +14,11 @@ public class Ej7 {
         int y = 3; // nº trimestre
 
         int notas[][];
-        notas = new int [x][y];
+        notas = new int [y][x];
 
 
-        for (int j = 0; j < y; j++) {
-            for (int i = 0; i < x; i++) {
+        for (int i = 0; i < y; i++) {
+            for (int j = 0; j < x; j++) {
                 System.out.print("Introduce la nota del alumno numero "+(j+1)+" del trimestre "+(i+1)+":");
                 notas[i][j] = teclado.nextInt();
             }
