@@ -16,30 +16,43 @@ public class Ej7 {
         int notas[][];
         notas = new int [x][y];
 
-        for (int i = 0; i < y; i++) {
-            for (int j = 0; j < x; j++) {
+
+        for (int j = 0; j < y; j++) {
+            for (int i = 0; i < x; i++) {
                 System.out.print("Introduce la nota del alumno numero "+(j+1)+" del trimestre "+(i+1)+":");
-                notas[j][i] = teclado.nextInt();
+                notas[i][j] = teclado.nextInt();
             }
         }
-        System.out.println(Arrays.deepToString(notas));
+        media_curso(notas, x, y);
 
-
-        /*System.out.print("Introduce las notas del primer trimestre. ");
-        for (int i = 0; i < x; i++) {
-            System.out.print("Nota numero "+(i+1)+":");
-            notas[i][1] = teclado.nextInt();
+        System.out.println("¿De que alumno quiere saber la media?");
+        int n = teclado.nextInt();
+        media_alumno(notas, x, y, n);
+    }
+    public static void media_curso (int[][] notas, int x, int y) {
+        int suma = 0;
+        for (int i = 0; i < y; i++) {
+            for (int j = 0; j < x; j++) {
+                if (i==0){
+                    suma=suma + notas[i][j];
+                }
+                if (i==1){
+                    suma=suma + notas[i][j];
+                }
+                if (i==2){
+                    suma=suma + notas[i][j];
+                }
+            }
+            System.out.println("La media del trimestre "+(i+1)+" es "+suma/x);
+            suma = 0;
         }
-        System.out.print("Introduce las notas del segundo trimestre. ");
-        for (int i = 0; i < x; i++) {
-            System.out.print("Nota numero "+(i+1)+":");
-            notas[i][2] = teclado.nextInt();
-        }
-        System.out.print("Introduce las notas del tercer trimestre. ");
-        for (int i = 0; i < x; i++) {
-            System.out.print("Nota numero "+(i+1)+":");
-            notas[i][3] = teclado.nextInt();
-        }*/
+    }
+    public static void media_alumno (int[][] notas, int x, int y, int n){
+        int suma = 0;
 
+        for (int i = 0; i < y; i++) {
+            suma = suma + notas[i][n-1];
+        }
+        System.out.println("La media del alumno "+n+" es "+(double)suma/y);
     }
 }
