@@ -7,8 +7,7 @@ public class Ej4 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int x = 0;
-
+       
         System.out.print("Introduce la posición del alfil: ");
         String posicion = teclado.nextLine();
 
