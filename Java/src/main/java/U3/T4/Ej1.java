@@ -13,10 +13,12 @@ public class Ej1 {
         int max = 0;
         int min = 500;
         int aux=0;
-        String total;
         int[] array;
         array = new int [x];
-        generadorrnd_comprobador(x, array, max, min);
+        int[] min_max;
+        min_max = new int [2];
+
+        generadorrnd_comprobador(x, array, max, min, min_max);
         for (int i = 0; i < x; i++) {
             System.out.print(array[i]+" ");
         }
@@ -26,16 +28,16 @@ public class Ej1 {
         System.out.println();
         if (opcion==1){
             for (int i = 0; i < x; i++) {
-                if(array[i]==min){
-                    System.out.print("**"+array[i]+"** ");
+                if(array[i]==min_max[0]){
+                    System.out.print("**"+min_max[0]+"** ");
                 }else{
                     System.out.print(array[i]+" ");
                 }
             }
         }else{
             for (int i = 0; i < x; i++) {
-                if (array[i] == max) {
-                    System.out.print("**" + array[i] + "** ");
+                if (array[i] == min_max[1]) {
+                    System.out.print("**" + min_max[1] + "** ");
                 } else {
                     System.out.print(array[i] + " ");
                 }
@@ -43,7 +45,7 @@ public class Ej1 {
         }
 
     }
-    public static void generadorrnd_comprobador (int x, int[] array, int max, int min){
+    public static void generadorrnd_comprobador (int x, int[] array, int max, int min, int[] min_max){
         int n = 0;
 
 
@@ -52,10 +54,13 @@ public class Ej1 {
             n = array[i];
             if (n<min){
                 min=n;
-            }else if(n>max){
+            }if(n>max){
                 max=n;
             }
         }
+        min_max[0]=min;
+        min_max[1]=max;
+
     }
     /*public static void min_max (int x, int[] array, int max, int min, int opcion, int aux, String total){
 
