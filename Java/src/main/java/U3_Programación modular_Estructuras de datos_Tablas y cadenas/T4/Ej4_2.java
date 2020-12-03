@@ -73,6 +73,6 @@ public class Ej4_2 {
     public static int letra_a_numero (String posicion){
         String letras = "abcdefgh";
 
-        return letras.indexOf(posicion.charAt(0));
+        return letras.indexOf(posicion.charAt(0));//index of devuelve la posicion
     }
 }
