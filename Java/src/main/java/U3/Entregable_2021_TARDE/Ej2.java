@@ -25,57 +25,24 @@ public class Ej2 {
      int n = teclado.nextInt();
      double numero=n;
 
-     String[] morse = {/*0*/"_____", /*1*/". _ _ _ _", /*2*/". . _ _ _", /*3*/". . . _ _", /*5*/"...._",
-                       /*6*/"_ . . . .", /*7*/" _ _ . . .", /*8*/"_ _ _ . .", /*9*/"_ _ _ _ ."};
+     System.out.println("EL numero "+n+" en morse es "+convierteEnMorse(n));
 
 
-     System.out.print(convierteEnMorse(numero, morse));
-     
-     
-     
-     
-     
-     
- }
-    public static double invertir_num(double numero){
-        double cifra=0;
-        double inverso = 0;
-        while(numero>=0){
-            cifra = numero%10;
-            inverso = (inverso * 10) + cifra;
-            numero/=10;
-        }
-        return inverso;
-    }
+     }
 
-    public static int cont_digitos(double numero){
-        int cont=0;
-        double aux = numero;
-        while(aux>0){
-            numero=aux/10;
-            cont++;
-        }
-        return  cont;
-    }
+    public static String convierteEnMorse(int n) {
 
-    public static String convierteEnMorse(double numero, String[] morse) {
-        numero = invertir_num(numero);
         String traduccion= "";
+        int n_temp=0;
+        String[] morse = {/*0*/"_____", /*1*/". _ _ _ _", /*2*/". . _ _ _", /*3*/". . . _ _", /*4*/"...._",
+                /*5*/".....", /*6*/"_ . . . .", /*7*/" _ _ . . .", /*8*/"_ _ _ . .", /*9*/"_ _ _ _ ."};
 
-        double cifra = 0;
+        for (int i = n; i > 0; i/=10) {
+            System.out.println(i);
+            n_temp=i%10; //al ser entre 10 no es necesario pasarlo a entero.
+            System.out.println(n_temp);
 
-        while (numero >= 0) {
-
-            numero = numero / 10;
-            cifra = numero%1;
-
-            for (int i = 0; i < morse.length; i++) {
-                if (i==cifra){
-                    traduccion=traduccion + morse[i];
-                }
-            }
-            numero=numero - cifra/10;
-
+            traduccion = morse[n_temp] + traduccion;
         }
         return traduccion;
     }
