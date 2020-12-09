@@ -3,6 +3,8 @@ package U3.Entregable_2021_TARDE;
 import java.util.Scanner;
 
 public class Ej4 {
+    /*Buscaminaas del tamaño introducido por el usuario, rellenado de forma aleatoria son - es agua y X es la bomba.
+     Una vez relleno, el usuario introducirá un posicion, en caso de no ser bomba habra que indicar cuantas bombas hay alrededor.*/
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduzca el número de filas y columnas: ");
@@ -33,8 +35,6 @@ public class Ej4 {
             }
         }
 
-
-
         do {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
@@ -51,129 +51,55 @@ public class Ej4 {
             f=f-1;
             c=c-1;
 
-            /*
-            if(f==0 && c==0){ //Esquina superior izquierda
-                //Caso5
-                if(buscaminas[f][c+1].equals(equis)) {
-                    System.out.println("5");
-                    contbomba++;
-                }
-                //Caso7
-                if(buscaminas[f+1][c].equals(equis)){
-                    System.out.println("7");
-                    contbomba++;
-                }
-                //Caso8
-                if(buscaminas[f+1][c+1].equals(equis)){
-                    System.out.println("8");
-                    contbomba++;
-                }
+            if(buscaminas[f][c].equals(equis)){
+                break;
             }
-            if (f==0 && c==n){  //Esquina superior derecha
-                //Caso4
-                if(buscaminas[f][c-1].equals(equis)){
-                    System.out.println("4");
-                    contbomba++;
-                }
-                //Caso6
-                if(buscaminas[f+1][c-1].equals(equis)){
-                    System.out.println("6");
-                    contbomba++;
-                }
-                //Caso7
-                if(buscaminas[f+1][c].equals(equis)){
-                    System.out.println("7");
-                    contbomba++;
-                }
+            contbomba=0; //Reinicia en contador de bombas en cada bucle
+
+            //Caso1
+            if(f-1>=0 && c-1>=0 && buscaminas[f - 1][c - 1].equals(equis)){
+                System.out.println("1");
+                contbomba++;
             }
-            if (f==n && c==0){  //Esquina inferior izquierda
-                //Caso2
-                if(buscaminas[f - 1][c].equals(equis)){
-                    System.out.println("2");
-                    contbomba++;
-                }
-                //Caso3
-                if(buscaminas[f - 1][c+1].equals(equis)){
-                    System.out.println("3");
-                    contbomba++;
-                }
-                //Caso5
-                if(buscaminas[f][c+1].equals(equis)){
-                    System.out.println("5");
-                    contbomba++;
-                }
+            //Caso2
+            if(f-1>=0 && buscaminas[f - 1][c].equals(equis)){
+                System.out.println("2");
+                contbomba++;
             }
-            if(f==n && c==n){  //Esquina inferior derecha
-                //Caso1
-                if(buscaminas[f - 1][c + 1].equals(equis)){
-                    System.out.println("1");
-                    contbomba++;
-                }
-                //Caso2
-                if(buscaminas[f - 1][c].equals(equis)){
-                    System.out.println("2");
-                    contbomba++;
-                }
-                //Caso4
-                if(buscaminas[f][c-1].equals(equis)){
-                    System.out.println("4");
-                    contbomba++;
-                }
+            //Caso3
+            if(f-1>=0 && c+1<n && buscaminas[f - 1][c + 1].equals(equis)){
+                System.out.println("3");
+                contbomba++;
             }
-            */
-
-
-
-
-
-
-            /*if(f!=0 && f!=n && c!=0 && c!=n) {
-                //Caso1
-                if(buscaminas[f - 1][c + 1].equals(equis)){
-                    System.out.println("1");
-                    contbomba++;
-                }
-                //Caso2
-                if(buscaminas[f - 1][c].equals(equis)){
-                    System.out.println("2");
-                    contbomba++;
-                }
-                //Caso3
-                if(buscaminas[f - 1][c+1].equals(equis)){
-                    System.out.println("3");
-                    contbomba++;
-                }
-                //Caso4
-                if(buscaminas[f][c-1].equals(equis)){
-                    System.out.println("4");
-                    contbomba++;
-                }
-                //Caso5
-                if(buscaminas[f][c+1].equals(equis)){
-                    System.out.println("5");
-                    contbomba++;
-                }
-                //Caso6
-                if(buscaminas[f+1][c-1].equals(equis)){
-                    System.out.println("6");
-                    contbomba++;
-                }
-                //Caso7
-                if(buscaminas[f+1][c].equals(equis)){
-                    System.out.println("7");
-                    contbomba++;
-                }
-                //Caso8
-                if(buscaminas[f+1][c+1].equals(equis)){
-                    System.out.println("8");
-                    contbomba++;
-                }
-            }*/
-
+            //Caso4
+            if(c-1>=0 && buscaminas[f][c - 1].equals(equis)){
+                System.out.println("4");
+                contbomba++;
+            }
+            //Caso5
+            if(c+1<n && buscaminas[f][c + 1].equals(equis)){
+                System.out.println("5");
+                contbomba++;
+            }
+            //Caso6
+            if(f+1<n && c-1>=0 && buscaminas[f + 1][c - 1].equals(equis)){
+                System.out.println("6");
+                contbomba++;
+            }
+            //Caso7
+            if(f+1<n && buscaminas[f + 1][c].equals(equis)){
+                System.out.println("7");
+                contbomba++;
+            }
+            //Caso8
+            if(f+1<n && c<n && buscaminas[f + 1][c + 1].equals(equis)){
+                System.out.println("8");
+                contbomba++;
+            }
 
             if(!buscaminas[f][c].equals(equis)){
 
-                System.out.println("La posición "+f+1+","+c+1+" tiene "+contbomba+" bombas en los alrededores.");
+                System.out.println("La posición "+(f+1)+","+(c+1)+" tiene "+contbomba+" bombas en los alrededores.");
                 System.out.println();
             }
 

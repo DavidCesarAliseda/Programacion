@@ -14,33 +14,39 @@ se devuelve un array con el número -1 como único elemento.*/
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-
         int[] array_inicial = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int[] primos;
         primos = new int[10];
-        filtraPrimos(array_inicial, primos);
-        System.out.println(Arrays.toString(primos));
+        int n=0;
+        int cont = 0;
+        int aux = 0;
 
-
-
-    }
-
-    public static void filtraPrimos(int[] array_inicial, int[] primos) {
-        boolean es_primo = false;
-        int x = 0;
-        int contador = 0;
         for (int i = 0; i < array_inicial.length; i++) {
-            for (int j = 2; j < array_inicial[i]; j++) {
-                if (array_inicial[i] % j == 0) {
-                    es_primo=false;
-                }
-                if(es_primo){
-                    primos[x]=array_inicial[i];
-                    contador++;
-            }
-
+            n=array_inicial[i];
+            if (es_primo(n)){
+                primos[cont] = array_inicial[i];
+                cont++;
+            }else{
+                aux++;
             }
         }
-    }
+        if(aux==10){
+            int[] no_hay_primos = {-1};
+        }else {
+            primos = Arrays.copyOf(primos, cont);
 
+            System.out.println(Arrays.toString(primos));
+        }
+    }
+    public static boolean es_primo(int n){
+        boolean primo = true;
+
+        for (int i = 2; i < n;i++ ){
+            if (n % i == 0) {
+                primo = false;
+                break;
+            }
+        }
+        return primo;
+    }
 }
