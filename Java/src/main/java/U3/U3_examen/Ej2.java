@@ -1,6 +1,5 @@
-package U3.Examen_2021_GrupoATarde;
+package U3.U3_examen;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ej2 {
