@@ -2,7 +2,7 @@ package U3.Entregable_2021_TARDE;
 
 import java.util.Scanner;
 
-public class Ej3 {
+public class Ej3_RotarArray {
     /*Hacer una algoritmo que solicite al usuario una cifra N y rellene un array bidimensional de N filas y N columnas con número aleatorios entre 100 y 200.
         Mostrar dicho array y a continuación rotarlo 90 grados:*/
     public static void main(String[] args) {

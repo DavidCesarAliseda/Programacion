@@ -9,8 +9,8 @@ public class Ej2 {
     La suma total debe aparecer en la esquina inferior derecha.*/
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int f = 4;
-        int c = 5;
+        int f = 2;
+        int c = 3;
         int[][] array;
         array = new int[f+1][c+1];
 
@@ -43,7 +43,7 @@ public class Ej2 {
         }
 
         //Suma de filas y columnas
-        array[f][c]=suma_col+suma_filas;
+        array[f][c]=suma_col;
 
         //Mostrar tabla
         for (int i = 0; i < f+1; i++) {

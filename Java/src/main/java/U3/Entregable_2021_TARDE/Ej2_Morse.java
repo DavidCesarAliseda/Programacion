@@ -2,7 +2,7 @@ package U3.Entregable_2021_TARDE;
 
 import java.util.Scanner;
 
-public class Ej2 {
+public class Ej2_Morse {
  /*Crea una función con la siguiente cabecera:
 
      public String convierteEnMorse(int n)
@@ -18,15 +18,14 @@ public class Ej2 {
      3 . . . _ _ 8 _ _ _ . .
      4 . . . . _ 9 _ _ _ _ .
      5 . . . . . 0 _ _ _ _ _*/
+
  public static void main(String[] args) {
      Scanner teclado = new Scanner(System.in);
 
      System.out.print("Introduzca el numero que desea convertir en morse: ");
      int n = teclado.nextInt();
-     double numero=n;
 
      System.out.println("EL numero "+n+" en morse es "+convierteEnMorse(n));
-
 
      }
 
@@ -35,7 +34,7 @@ public class Ej2 {
         String traduccion= "";
         int n_temp=0;
         String[] morse = {/*0*/"_____", /*1*/". _ _ _ _", /*2*/". . _ _ _", /*3*/". . . _ _", /*4*/"...._",
-                /*5*/".....", /*6*/"_ . . . .", /*7*/" _ _ . . .", /*8*/"_ _ _ . .", /*9*/"_ _ _ _ ."};
+                          /*5*/".....", /*6*/"_ . . . .", /*7*/" _ _ . . .", /*8*/"_ _ _ . .", /*9*/"_ _ _ _ ."};
 
         for (int i = n; i > 0; i/=10) {
             System.out.println(i);
@@ -46,8 +45,4 @@ public class Ej2 {
         }
         return traduccion;
     }
-
-
-
-        
 }

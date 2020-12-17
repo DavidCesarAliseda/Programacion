@@ -53,13 +53,12 @@ El array unidimensional generado por corteza(a) sería el siguiente:
             corteza[contc]=n[n.length-1][i];
             contc++;
         }
+
         for (int i = n.length-2; i >0 ; i--) {
             corteza[contc]=n[i][0];
             contc++;
         }
 
         return corteza;
-
     }
-
 }

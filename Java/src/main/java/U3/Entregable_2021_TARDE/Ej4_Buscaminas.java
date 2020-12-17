@@ -2,7 +2,7 @@ package U3.Entregable_2021_TARDE;
 
 import java.util.Scanner;
 
-public class Ej4 {
+public class Ej4_Buscaminas {
     /*Buscaminaas del tamaño introducido por el usuario, rellenado de forma aleatoria son - es agua y X es la bomba.
      Una vez relleno, el usuario introducirá un posicion, en caso de no ser bomba habra que indicar cuantas bombas hay alrededor.*/
     public static void main(String[] args) {
