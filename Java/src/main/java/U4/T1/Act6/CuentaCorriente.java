@@ -1,4 +1,4 @@
-package U4.T1.Act4;
+package U4.T1.Act6;
 
 public class CuentaCorriente {
     /*Todas las cuentas corrientes con las que vamos a trabajar pertenecen al mismo banco.

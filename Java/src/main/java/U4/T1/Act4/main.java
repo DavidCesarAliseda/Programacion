@@ -16,9 +16,11 @@ public class main {
         CuentaCorriente c1 = new CuentaCorriente("Armando Distancia", "5353");
         CuentaCorriente c2 = new CuentaCorriente("Shu Primo", "6467");
 
-        c1.informacion();
-
-        c1.nombre_banco = "Banco Central";
+        System.out.println("El nombre del banco es "+CuentaCorriente.nombre_banco);
+        CuentaCorriente.cambiarNombreBanco("Unicaja");
+        System.out.println("El nuevo banco es "+CuentaCorriente.nombre_banco);
+        CuentaCorriente.nombre_banco = "LaCaja";
+        System.out.println("El nuevo nombre del banco es "+CuentaCorriente.nombre_banco);
 
 
         
