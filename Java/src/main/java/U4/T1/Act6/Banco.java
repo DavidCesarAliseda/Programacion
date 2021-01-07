@@ -14,8 +14,29 @@ Escribir los métodos necesarios en la clase CuentaCorriente para gestionar el b
 (cambiar de banco, mostrar la info de la cuenta, incluídos los datos del banco si lo tiene vinculado).
 Existe la posibilidad de que una cuenta corriente no esté vinculada a ningún banco.*/
 
-    String nombre;
-    long capital;
+    final private String nombre;
+    double capital = 5.2;
     String direccion;
+
+    //Constructor
+    public Banco(String nombre, String direccion){
+        this.nombre = nombre;
+        this.direccion = direccion;
+    }
+
+    public Banco(String nombre, double capital, String direccion) {
+        this.nombre = nombre;
+        this.capital = capital;
+        this.direccion = direccion;
+    }
+
+    public void Info() {
+        System.out.println("Informacion del banco");
+        System.out.println(" Banco: "+nombre);
+        System.out.println(" Capital: "+capital+" millones de euros.");
+        System.out.println(" Direccion: "+direccion);
+        System.out.println();
+    }
+
 
 }

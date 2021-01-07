@@ -44,6 +44,7 @@ public class Texto {
             texto = caracter + texto;
         }
     }
+
     //Al final
     void caracter_final(char caracter){
         if (texto.length()+1<=this.maximo){//Para añadir caracter

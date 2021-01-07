@@ -13,6 +13,29 @@ Modificar la clase CuentaCorriente para que cada una esté vinculada a un objeto
 Escribir los métodos necesarios en la clase CuentaCorriente para gestionar el banco al que pertenece
 (cambiar de banco, mostrar la info de la cuenta, incluídos los datos del banco si lo tiene vinculado).
 Existe la posibilidad de que una cuenta corriente no esté vinculada a ningún banco.*/
+    public static void main(String[] args) {
+        //Banco
 
+        Banco Bancolega = new Banco ("Bancolega", "Calle Ratero N21");
+
+        Banco Bankillo = new Banco ("Bankillo", 8, "Calle Ruina SN");
+
+        Bancolega.Info();
+        Bankillo.Info();
+
+        //Cuentacorrienre
+
+        CuentaCorriente c1 = new CuentaCorriente("Maria Dolores Fuertes", "565656");
+        CuentaCorriente c2 = new CuentaCorriente("Alvaro Arbeloa", "468485", Bankillo);
+
+        c1.ingreso(5000);
+
+        c1.mostrarInfo();
+
+        c1.cambiarBanco(Bancolega);
+
+        c1.mostrarInfo();
+
+    }
 
 }
