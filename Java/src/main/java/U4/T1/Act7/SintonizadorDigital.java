@@ -23,7 +23,7 @@ public class SintonizadorDigital {
         this.frecuencia = 80;
     }
 
-    /*Funciones*/
+    /*Metodos*/
     /*Up*/
     public double up (){
         frecuencia += 0.5; //Sube frecuencia
