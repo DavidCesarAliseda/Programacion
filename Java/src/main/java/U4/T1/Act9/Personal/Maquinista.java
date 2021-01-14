@@ -3,10 +3,10 @@ package U4.T1.Act9.Personal;
 public class Maquinista {
     /*Maquinistas: nombre completo, dni, sueldo mensual, rango*/
 
-    String nombre;
-    String DNI;
-    double sueldo;
-    int rango;
+    private String nombre;
+    private String DNI;
+    private double sueldo;
+    private int rango;
 
     public Maquinista(String nombre, String DNI, double sueldo, int rango) {
         setNombre(nombre);

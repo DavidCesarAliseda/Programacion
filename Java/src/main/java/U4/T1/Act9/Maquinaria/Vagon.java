@@ -1,11 +1,11 @@
 package U4.T1.Act9.Maquinaria;
 
 class Vagon {
-    int carga_max;
-    int carga_actual;
-    String mercancia;
+    private int carga_max;
+    private int carga_actual;
+    private tipo_mercancia mercancia;
 
-    public Vagon(int carga_max, int carga_actual, String mercancia) {
+    public Vagon(int carga_max, int carga_actual, tipo_mercancia mercancia) {
         setCarga_actual(carga_actual);
         setCarga_max(carga_max);
         setMercancia(mercancia);
@@ -27,11 +27,11 @@ class Vagon {
         this.carga_actual = carga_actual;
     }
 //Mercancia
-    public String getMercancia() {
+    public tipo_mercancia getMercancia() {
         return mercancia;
     }
 
-    public void setMercancia(String mercancia) {
+    public void setMercancia(tipo_mercancia mercancia) {
         this.mercancia = mercancia;
     }
 

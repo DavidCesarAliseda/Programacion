@@ -2,13 +2,11 @@ package U4.T1.Act9.Maquinaria;
 
 import U4.T1.Act9.Personal.Maquinista;
 
-import java.util.Arrays;
-
 public class Tren {
 
-    Locomotora locomotora;
-    Vagon vagones[];
-    Maquinista maquinista;
+    private Locomotora locomotora;
+    private Vagon vagones[];
+    private Maquinista maquinista;
     private int numvagones;
 
     public Tren(Locomotora locomotora, Maquinista maquinista) {
@@ -37,19 +35,22 @@ public class Tren {
     }
     //Metodos
     //Añadir vagon
-    public void anadir_vagon(int carga_max, int carga_actual, String mercancia){
-        if(numvagones <= 5) {
+    public void anadir_vagon(int carga_max, int carga_actual, tipo_mercancia mercancia){
+        if(numvagones < 5) {
             Vagon v = new Vagon(carga_max, carga_actual, mercancia);
             vagones[numvagones] = v;
             numvagones++;
+        }else{
+            System.out.println("No se puede añadir el vagon ");
+            System.out.println();
         }
     }
     public void infoTren(){
         maquinista.infoMaquinista();
         locomotora.infoLocomotora();
         for (int i = 0; i < numvagones; i++) {
-            System.out.println("Info vagon numero "+numvagones);
-            vagones[numvagones].infoVagon();
+            System.out.println("Info vagon numero "+(i+1));
+            vagones[i].infoVagon();
         }
     }
 }

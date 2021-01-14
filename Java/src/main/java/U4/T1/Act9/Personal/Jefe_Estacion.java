@@ -3,8 +3,8 @@ package U4.T1.Act9.Personal;
 public class Jefe_Estacion {
     /*Jefes estación: nombre completo, dni.*/
 
-    String nombre;
-    String DNI;
+    private String nombre;
+    private String DNI;
 
     public Jefe_Estacion(String nombre, String DNI) {
         setNombre(nombre);

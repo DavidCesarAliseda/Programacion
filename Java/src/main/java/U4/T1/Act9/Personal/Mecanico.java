@@ -3,11 +3,11 @@ package U4.T1.Act9.Personal;
 public class Mecanico {
     /*Mecánicos: nombre completo, tlfno y especialidad (frenos, hidráulica,...)*/
 
-    String nombre;
-    long telefono;
-    String especialidad;
+    private String nombre;
+    private long telefono;
+    private tipo_especialidad especialidad;
 
-    public Mecanico(String nombre, long telefono, String especialidad) {
+    public Mecanico(String nombre, long telefono, tipo_especialidad especialidad) {
         setNombre(nombre);
         setTelefono(telefono);
         setEspecialidad(especialidad);
@@ -32,11 +32,11 @@ public class Mecanico {
     }
 
     //Especialidad
-    public String getEspecialidad() {
+    public tipo_especialidad getEspecialidad() {
         return especialidad;
     }
 
-    public void setEspecialidad(String especialidad) {
+    public void setEspecialidad(tipo_especialidad especialidad) {
         this.especialidad = especialidad;
     }
 

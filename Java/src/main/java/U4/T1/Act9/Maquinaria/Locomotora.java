@@ -4,10 +4,10 @@ import U4.T1.Act9.Personal.Mecanico;
 
 public class Locomotora {
 
-    String matricula;
-    int potencia;
-    int anio;
-    Mecanico mecanico;
+    private String matricula;
+    private int potencia;
+    private int anio;
+    private Mecanico mecanico;
 
     public Locomotora(String matricula, int potencia, int anio, Mecanico mecanico) {
         setMatricula(matricula);
