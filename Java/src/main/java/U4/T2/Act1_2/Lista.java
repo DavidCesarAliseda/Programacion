@@ -1,5 +1,5 @@
 //Rehacer
-package U4.T2.Act1;
+package U4.T2.Act1_2;
 
 import java.util.Arrays;
 
@@ -12,12 +12,12 @@ public class Lista {
     //Dos constructores, uno por defecto que cree la tabla con capacidad para 10 números,
     // y otro al que se le pasa como argumento el tamaño inicial de la tabla.
     public Lista() {
-        setIndice(0);
+        setIndice(-1);
         tabla = new Integer[por_defecto];
     }
 
     public Lista(int tamanio_inicial) {
-        setIndice(0);
+        setIndice(-1);
         tabla = new Integer[tamanio_inicial];
     }
 
@@ -48,11 +48,11 @@ public class Lista {
 
     //Insertar final
     public void insert_final(int num) {
-        if (Llena()) {
+        if (Llena()){
             tabla = Arrays.copyOf(tabla, tabla.length + 1);
         }
-        tabla[indice] = num;
         indice++;
+        tabla[indice]=num;
     }
 
     //Insertar principio
@@ -60,11 +60,13 @@ public class Lista {
         if (Llena()) {
             tabla = Arrays.copyOf(tabla, tabla.length + 1);
         }
-        for (int i = indice; i >= 1; i--) {
+        for (int i = indice; i >= 0; i--) {
             tabla[i] = tabla[i - 1];//Desplaza los elementos hacia el final
         }
-        tabla[0] = num;
         indice++;
+        tabla[0]=num;
+
+
     }
 
     //Insertar posicion
@@ -72,22 +74,23 @@ public class Lista {
         if (Llena()) {
             tabla = Arrays.copyOf(tabla, tabla.length + 1);
         }
-        for (int i = indice; i >= posicion - 1; i--) {
-            tabla[i] = tabla[i - 1];//Desplaza los elementos hacia el final
+        for (int i = indice; i >= posicion-1; i--) {
+            tabla[i] = tabla[i-1];//Desplaza los elementos hacia el final
         }
-        tabla[posicion - 1] = num;
         indice++;
+        tabla[posicion-1]=num;
+
     }
 
     //¿Cabe el dato?
     boolean Llena() {
-        return indice == tabla.length;
+        return indice == tabla.length-1;
     }
 
     //Convertir array en cadena
     public String array_a_cadena() {
         String cadena = "";
-        for (int i = 0; i < indice; i++) {
+        for (int i = 0; i <= indice; i++) {
             if (i < indice - 1) {
                 cadena = cadena + tabla[i] + ", ";
             } else {
@@ -99,18 +102,7 @@ public class Lista {
 
     //Fusionar listas
     public void fusionar_tablas_alfinal(Lista otraLista) {
-        for (int i = 0; i < otraLista.indice ; i++) {
-            insert_final(otraLista.obtener_elemento(i+1));
 
-        }
-        /*while (tabla.length < indice + otraLista.indice) {
-            tabla = Arrays.copyOf(tabla, tabla.length + 1);
-        }
-
-        for (int i = 0, j = indice; i < otraLista.indice; i++, j++) {
-            tabla[j] = otraLista.tabla[i];
-        }*/
-        indice= tabla.length;
     }
 
     //Eliminar elemento
@@ -129,15 +121,15 @@ public class Lista {
 
     //Buscar elemento
     int buscar_elemento(Integer num) {
-        int indice = -1;
-        for (int i = 0; i < this.indice; i++) {
+        int indic = -1;
+        for (int i = 0; i <= this.indice; i++) {
             if (tabla[i].equals(num)) {
-                indice = i;
+                indic = i;
                 break;
             }
 
         }
-        return indice;
+        return indic;
     }
 }
 

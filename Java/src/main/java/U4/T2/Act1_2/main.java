@@ -1,4 +1,4 @@
-package U4.T2.Act1;
+package U4.T2.Act1_2;
 
 public class main {
     /*Actividad 1: Las listas son estructuras dinámicas de datos, donde se pueden insertar o eliminar elementos de un determinado tipo sin limitación de espacio.
@@ -20,31 +20,10 @@ public class main {
         Lista l2 = new Lista(3);
         Lista l3 = new Lista();
 
-        l1.insert_final(1);
-        l1.insert_final(2);
-        l2.insert_final(2);
+        l2.insert_inicio(9);
+        l2.insert_final(6);
+        l2.insert_posicion(1, 2);
         System.out.println(l2.array_a_cadena());
-
-        l2.insert_inicio(3);
-        System.out.println(l2.array_a_cadena());
-
-        l2.insert_posicion(4, 2);
-        System.out.println();
-        System.out.println(l1.array_a_cadena());
-        System.out.println(l2.array_a_cadena());
-
-        l1.fusionar_tablas_alfinal(l2);
-        System.out.println(l1.array_a_cadena());
-
-        l1.mostrar_numelementos();
-
-        l1.eliminar_elemento(3);
-        System.out.println(l1.array_a_cadena());
-
-        /*System.out.println(l1.obtener_elemento(1));
-
-        System.out.println(l1.buscar_elemento(2));
-        l1.mostrar_numelementos();*/
 
 
     }
