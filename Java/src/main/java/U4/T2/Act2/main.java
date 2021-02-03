@@ -12,7 +12,9 @@ public class main {
         p1.apilar(9);
         p1.cima();
         p1.desapila();
-        p1.cima();
+        p1.desapila();
+        p1.desapila();
+
 
 
 

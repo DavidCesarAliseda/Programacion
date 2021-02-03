@@ -20,10 +20,16 @@ public class main {
         Lista l2 = new Lista(3);
         Lista l3 = new Lista();
 
+        l3.insert_final(5);
+        l3.insert_final(8);
+
         l2.insert_inicio(9);
         l2.insert_final(6);
         l2.insert_posicion(1, 2);
         System.out.println(l2.array_a_cadena());
+        System.out.println(l3.array_a_cadena());
+        l3.eliminar_elemento(2);
+        System.out.println(l3.array_a_cadena());
 
 
     }

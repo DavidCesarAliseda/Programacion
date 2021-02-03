@@ -1,14 +1,14 @@
-package U4.T2.Act2;
+package U5.T2.Act1;
 
 import java.util.Arrays;
 
-public class Pila {
+public class PilaTabla implements Pila{
     private int cima;
     private Integer[] pila;
     private int por_defecto=0;
     private int indice = -1;
 
-    public Pila() {
+    public PilaTabla() {
         setCima(0);
         pila = new Integer[por_defecto];
     }
@@ -22,27 +22,11 @@ public class Pila {
     }
 
     //Metodos
-    //Apilar
-    public void apilar(int num){
-        if (Llena()){
-            pila = Arrays.copyOf(pila, pila.length + 1);
-        }
-        pila[indice+1]=num;
-        indice++;
-    }
-    //Desapilar
-    public void desapila(){
-        if (indice>=0) {
-            System.out.println("El dato con indice " + indice + " es el " + pila[indice]);
-            indice--;
-        }else{
-            System.out.println("No hay datos en la pila.");
-        }
 
-    }
+
     //Comprobar si está llena.
     public boolean Llena(){
-            return indice == (pila.length-1);
+        return indice == (pila.length-1);
     }
     //Cima
     public void cima(){
@@ -53,8 +37,23 @@ public class Pila {
         }
     }
 
+
+    @Override
+    public void apilar(int num) {
+        if (Llena()){
+            pila = Arrays.copyOf(pila, pila.length + 1);
+        }
+        pila[indice+1]=num;
+        indice++;
+    }
+
+    @Override
+    public void desapilar() {
+        if (indice>=0) {
+            System.out.println("El dato con indice " + indice + " es el " + pila[indice]);
+            indice--;
+        }else{
+            System.out.println("No hay datos en la pila.");
+        }
+    }
 }
-
-
-
-
