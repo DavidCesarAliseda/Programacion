@@ -15,14 +15,14 @@ public class Electrodomestico {
 
     public Electrodomestico(int precio_base, int peso) {
         setPrecio_base(precio_base);
-        setPeso(getPeso());
+        setPeso(peso);
         setColor(Tipo_Color.ROJO);
         setConsumo_energetico(Tipo_Consumo_Energetico.C);
     }
 
     public Electrodomestico(int precio_base, Tipo_Color color, Tipo_Consumo_Energetico consumo_energetico, int peso) {
         setPrecio_base(precio_base);
-        setPeso(getPeso());
+        setPeso(peso);
         setColor(color);
         setConsumo_energetico(consumo_energetico);
     }
@@ -63,50 +63,50 @@ public class Electrodomestico {
     //Metodos
 
     int getPrecioFinal(){
-
+        int precio_final=this.precio_base;
         switch(consumo_energetico){
             case A:
-                precio_base+=100;
+                precio_final+=100;
                 break;
             case B:
-                precio_base+=80;
+                precio_final+=80;
                 break;
             case C:
-                precio_base+=60;
+                precio_final+=60;
                 break;
             case D:
-                precio_base+=50;
+                precio_final+=50;
                 break;
             case E:
-                precio_base+=30;
+                precio_final+=30;
                 break;
             case F:
-                precio_base+=10;
+                precio_final+=10;
                 break;
         }
 
         if(peso>=0 && peso<19){
-            precio_base+=10;
+            precio_final+=10;
         }else if(peso>=20 && peso<49){
-            precio_base+=50;
+            precio_final+=50;
         }else if(peso>=50 && peso<=79){
-            precio_base+=80;
+            precio_final+=80;
         }else if(peso>=80){
-            precio_base+=100;
+            precio_final+=100;
         }
 
-        return precio_base;
+        return precio_final;
     }
 
     @Override
     public String toString() {
-        getPrecioFinal();
+
         return "Electrodomestico{" +
                 "precio_base=" + precio_base +
                 ", color=" + color +
                 ", consumo_energetico=" + consumo_energetico +
                 ", peso=" + peso +
-                ", precio=" + precio_base +
+                ", precio=" + this.getPrecioFinal() +
                 '}';
     }
 }
