@@ -1,6 +1,6 @@
 package U5.T2.Act3;
 
-public class PoligonoRegular implements Figura{
+public abstract class PoligonoRegular implements Figura{
 
     protected int lado;
     public Color color;
