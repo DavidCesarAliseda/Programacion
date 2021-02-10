@@ -1,9 +1,9 @@
-package U5.Examen2020;
+package U5.Examen2020_2.Examen2020;
 
-import U5.Examen2020.Materiales.Cristal;
-import U5.Examen2020.Materiales.Metal;
-import U5.Examen2020.Materiales.Roca;
-import U5.Examen2020.Materiales.Tipo_Cristal;
+import U5.Examen2020_2.Examen2020.Materiales.Cristal;
+import U5.Examen2020_2.Examen2020.Materiales.Metal;
+import U5.Examen2020_2.Examen2020.Materiales.Roca;
+import U5.Examen2020_2.Examen2020.Materiales.Tipo_Cristal;
 
 public class main {
     public static void main(String[] args) {

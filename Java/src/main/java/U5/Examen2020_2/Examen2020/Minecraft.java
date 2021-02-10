@@ -1,4 +1,4 @@
-package U5.Examen2020;
+package U5.Examen2020_2.Examen2020;
 
 import java.util.Arrays;
 
@@ -15,14 +15,13 @@ Debo de tener también un método ultimoMaterialQueQueda() que me diga, cuando h
     private int indiceMateriales;
 
     public Minecraft() {
-        materiales= new Material[0];
+        materiales= new Material[MatMax];
         indiceMateriales=0;
     }
 
     //Metodos
     public void addMaterial(Material o){
         if (indiceMateriales < MatMax){
-            this.materiales=Arrays.copyOf(this.materiales, this.materiales.length+1);
             this.materiales[indiceMateriales++]=o;
         }else{
             System.out.println("No es posible introducir mas materiales.");
