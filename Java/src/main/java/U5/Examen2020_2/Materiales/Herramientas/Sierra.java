@@ -1,6 +1,6 @@
-package U5.Examen2020_2.Examen2020.Materiales.Herramientas;
+package U5.Examen2020_2.Materiales.Herramientas;
 
-import U5.Examen2020_2.Examen2020.Materiales.Herramienta;
+import U5.Examen2020_2.Materiales.Herramienta;
 
 public class Sierra extends Herramienta {
 

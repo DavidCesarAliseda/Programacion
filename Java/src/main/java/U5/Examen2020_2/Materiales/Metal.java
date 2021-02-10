@@ -1,6 +1,6 @@
-package U5.Examen2020_2.Examen2020.Materiales;
+package U5.Examen2020_2.Materiales;
 
-import U5.Examen2020_2.Examen2020.Material;
+import U5.Examen2020_2.Material;
 
 public class Metal extends Material implements Mezclar {
     private boolean esImantable;

@@ -1,7 +1,7 @@
-package U5.Examen2020_2.Examen2020.Materiales.Herramientas;
+package U5.Examen2020_2.Materiales.Herramientas;
 
-import U5.Examen2020_2.Examen2020.Material;
-import U5.Examen2020_2.Examen2020.Materiales.Herramienta;
+import U5.Examen2020_2.Material;
+import U5.Examen2020_2.Materiales.Herramienta;
 
 public class Pico extends Herramienta implements Minar {
     private int grosor;

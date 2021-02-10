@@ -1,4 +1,4 @@
-package U5.Examen2020_2.Examen2020;
+package U5.Examen2020_2;
 
 import java.util.Arrays;
 

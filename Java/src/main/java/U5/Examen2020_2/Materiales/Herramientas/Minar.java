@@ -1,4 +1,4 @@
-package U5.Examen2020_2.Examen2020.Materiales.Herramientas;
+package U5.Examen2020_2.Materiales.Herramientas;
 
 public interface Minar {
     public void hacer(Object o);

@@ -1,4 +1,4 @@
-package U5.Examen2020_2.Examen2020;
+package U5.Examen2020_2;
 
 public abstract class Material implements Comparable{
     /*El nombre
