@@ -1,6 +1,8 @@
 package U4.T1.Act9.Personal;
 
-public class Mecanico {
+import java.io.Serializable;
+
+public class Mecanico implements Serializable {
     /*Mecánicos: nombre completo, tlfno y especialidad (frenos, hidráulica,...)*/
 
     private String nombre;

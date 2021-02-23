@@ -2,7 +2,9 @@ package U4.T1.Act9.Maquinaria;
 
 import U4.T1.Act9.Personal.Maquinista;
 
-public class Tren {
+import java.io.Serializable;
+
+public class Tren implements Serializable {//Para tema de ficheros
 
     private Locomotora locomotora;
     private Vagon vagones[];

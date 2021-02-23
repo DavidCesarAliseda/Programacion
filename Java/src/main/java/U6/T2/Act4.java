@@ -30,7 +30,7 @@ public class Act4 {
     static void writeDouble(double[] d) {
         ObjectOutputStream out = null;
         try {
-            out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act3//arreydouble.dat"));
+            out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act4//arreydouble.dat"));
             out.writeObject(d);
             out.close();
         } catch (IOException e) {

@@ -1,6 +1,8 @@
 package U4.T1.Act9.Personal;
 
-public class Maquinista {
+import java.io.Serializable;
+
+public class Maquinista implements Serializable {
     /*Maquinistas: nombre completo, dni, sueldo mensual, rango*/
 
     private String nombre;

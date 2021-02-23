@@ -8,7 +8,7 @@ public class Act5 {
         double tabla[] = new double[0];
         ObjectInput in=null;
         try {
-            in=new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act3//arreydouble.dat"));
+            in=new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act4//arreydouble.dat"));
             tabla= (double[]) in.readObject();
             in.close();
         } catch (IOException | ClassNotFoundException e) {

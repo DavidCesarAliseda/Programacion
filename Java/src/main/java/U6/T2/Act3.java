@@ -14,7 +14,7 @@ public class Act3 {
         Scanner teclado = new Scanner(System.in);
         ObjectOutputStream out=null;
         try {
-            out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act2//numint.dat"));
+            out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act3//numint.dat"));
             System.out.println("Introduzca un numero: ");
             int num = teclado.nextInt();
             while(num>=0){
@@ -39,7 +39,7 @@ public class Act3 {
     static void readInt() throws IOException {
         ObjectInput in=null;
         try{
-            in=new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act2//numint.dat"));
+            in=new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act3//numint.dat"));
             while (true){
                 System.out.println(in.readInt());
             }

@@ -1,9 +1,6 @@
 package U6.T2;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.Scanner;
 
 public class Act7 {
@@ -14,14 +11,15 @@ public class Act7 {
 
         System.out.println("Introduzca una frase: ");
         String frase = teclado.nextLine();
-
+        Act7.writeString(frase);
+        Act7.readString();
 
     }
     static void writeString(String s){
         ObjectOutputStream out=null;
         try {
             out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act7//frase.dat"));
-            out.writeChars(s);
+            out.writeUTF(s);
             out.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,5 +32,26 @@ public class Act7 {
                 }
             }
         }
+    }
+
+    static void readString(){
+        ObjectInputStream in = null;
+        String frase="";
+        try {
+            in= new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act7//frase.dat"));
+            frase=in.readUTF();
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if (in!=null){
+                try{
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        System.out.println( frase);
     }
 }
