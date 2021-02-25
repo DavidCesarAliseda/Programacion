@@ -1,5 +1,12 @@
 package U6.T3.Act2;
 
+import U6.T3.Act1.Cliente;
+import U6.T3.Act1.EdadException;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class main {
     /*Actividad 2: A modo de fichero de log, introduzca la lógica necesaria en el programa anterior,
     para que las excepciones que se generen se escriban en un fichero con un código y un mensaje que identifique
@@ -13,4 +20,13 @@ public class main {
 
     19/03/2019 10:20:03 -EX002 - MenorDeEdadException: Imposible crear el usuario con dni 44444444P.
     El cliente no puede ser menor de edad (Edad indicada: 16).*/
+    public static void main(String[] args) {
+        //
+        try {
+            U6.T3.Act1.Cliente c1 = new Cliente( 14);
+        } catch (EdadException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
 }
