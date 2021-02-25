@@ -1,7 +1,6 @@
 package U6.T3.Act2;
 
-import U6.T3.Act1.Cliente;
-import U6.T3.Act1.EdadException;
+import U6.T3.Act2.EdadException;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,10 +22,12 @@ public class main {
     public static void main(String[] args) {
         //
         try {
-            U6.T3.Act1.Cliente c1 = new Cliente( 14);
+            Cliente c1 = new Cliente(14, "5555");
         } catch (EdadException e) {
+            System.out.println("Dentro de catch");
             System.out.println(e.getMessage());
         }
+
 
     }
 }

@@ -20,6 +20,7 @@ public class Act7 {
         try {
             out=new ObjectOutputStream(new FileOutputStream("Ficheros//U6//T2//Act7//frase.dat"));
             out.writeUTF(s);
+          //out.writeObject
             out.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,6 +41,7 @@ public class Act7 {
         try {
             in= new ObjectInputStream(new FileInputStream("Ficheros//U6//T2//Act7//frase.dat"));
             frase=in.readUTF();
+            //(String) in.readObject()
             in.close();
         } catch (IOException e) {
             e.printStackTrace();

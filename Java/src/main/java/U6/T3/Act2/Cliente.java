@@ -5,8 +5,9 @@ public class Cliente {
     private String dni;
 
     public Cliente(int edad, String dni) throws EdadException {
-        setEdad(edad);
         setDni(dni);
+        setEdad(edad);
+
     }
 
     public int getEdad() {
