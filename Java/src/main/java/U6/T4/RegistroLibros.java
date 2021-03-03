@@ -22,6 +22,6 @@ public class RegistroLibros {
     }
 
     public void setLibros() {
-        this.libros = new Libro[];
+        this.libros = new Libro[0];
     }
 }
