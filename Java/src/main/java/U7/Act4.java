@@ -19,18 +19,26 @@ public class Act4 {
         ArrayList<String> palabras_arraylist = new ArrayList<String>(palabras_list);
         System.out.println(palabras_arraylist);
 
-        Iterator <String> it = palabras_arraylist.iterator();
-        while (it.hasNext()){
-            Iterator <String> it2 = palabras_arraylist.iterator();
-            palabras_arraylist.remove(0);
+
+        ArrayList<String> palabras_arraylist_temp=palabras_arraylist;
+        ArrayList<String> palabras_norep=palabras_arraylist;
+        Iterator<String> it = palabras_arraylist.iterator();
+        Iterator<String> it2 = palabras_arraylist_temp.iterator();
+        it2.next();
+        while(it.hasNext()){
             while (it2.hasNext()){
-                it2.next();
                 if (it.next().equals(it2.next())){
-                    System.out.println(it.next());
-                    break;
+                    System.out.println(it.next()+"1");
+                }else{
+                    palabras_norep.add(it.next());
                 }
+
+
             }
+
         }
+        System.out.println(palabras_norep);
+
 
 
     }
