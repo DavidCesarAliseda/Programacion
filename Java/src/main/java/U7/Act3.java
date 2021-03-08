@@ -16,7 +16,6 @@ public class Act3 {
             int contador=0;
             Iterator<Integer> it = lista.iterator();
             while (it.hasNext()){
-
                 if (it.next()<=num){
                     lista.add(contador, num);
                 }else{

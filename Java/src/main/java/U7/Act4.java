@@ -13,33 +13,40 @@ public class Act4 {
 
         //Convertir la cadena a array de cadena
         String[] palabras_separadas = frase.split( " ");
-        //convertir array de cadenas en lista
+
+        /*//convertir array de cadenas en lista
         List<String> palabras_list = Arrays.asList(palabras_separadas);
         //convertir lista en array list
         ArrayList<String> palabras_arraylist = new ArrayList<String>(palabras_list);
-        System.out.println(palabras_arraylist);
+        System.out.println(palabras_arraylist);*/
 
+        ArrayList<String> palabras_arraylist = new ArrayList<String>(Arrays.asList(palabras_separadas));
 
         ArrayList<String> palabras_arraylist_temp=palabras_arraylist;
-        ArrayList<String> palabras_norep=palabras_arraylist;
+        TreeSet<String> rep = new TreeSet<>();
         Iterator<String> it = palabras_arraylist.iterator();
-        Iterator<String> it2 = palabras_arraylist_temp.iterator();
-        it2.next();
+
+
         while(it.hasNext()){
+            String p1=it.next();
+            int cont = 0;
+            Iterator<String> it2 = palabras_arraylist_temp.iterator();
             while (it2.hasNext()){
-                if (it.next().equals(it2.next())){
-                    System.out.println(it.next()+"1");
-                }else{
-                    palabras_norep.add(it.next());
+                String p2=it2.next();
+                if (p1.equals(p2)){
+                    cont++;
+                    if (cont>1){
+                        rep.add(p1);
+                    }
                 }
-
-
             }
-
         }
-        System.out.println(palabras_norep);
-
-
+        System.out.println("Repetidas: ");
+        System.out.println(rep);
+        System.out.println();
+        System.out.println("No repetidas:");
+        palabras_arraylist_temp.removeAll(rep);
+        System.out.println(palabras_arraylist_temp);
 
     }
 }
