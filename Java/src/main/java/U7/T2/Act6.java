@@ -12,6 +12,8 @@ List<Character>leeCadena()
 
 Dicha función lee una cadena por teclado y nos la devuelve en una lista con un carácter en cada nodo.*/
     public static void main(String[] args) {
+
+
         System.out.println(leeCadena());
     }
     static List<Character> leeCadena(){
