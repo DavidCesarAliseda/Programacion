@@ -1,4 +1,4 @@
-package alixar.examen;
+package U7.ExamenCollection2020;
 
 import java.io.Serializable;
 
