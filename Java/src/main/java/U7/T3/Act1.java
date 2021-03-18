@@ -1,7 +1,6 @@
 package U7.T3;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Act1 {
     /*Crea un HashMap cuya clave sea un Integer, y cuyos valores sean los nombres de algunos de tus compañeros.
@@ -11,19 +10,23 @@ public class Act1 {
 
 Una vez guardados los elementos, deben mostrarse todos los elementos (clave-valor) del HasMap.*/
     public static void main(String[] args) {
+        boolean yaEsta=false;
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un nombre: ");
         String nombre = sc.nextLine();
         System.out.println("Introduzca un dni: ");
-        String dni = null;
+        String dni = sc.nextLine();
 
-        //HashMap<Integer> m
+        Map<Integer, String> m = new HashMap<>();
 
-        while (!dni.equals("fin")){
-            dni = sc.nextLine();
-            System.out.println(Calc_clave(dni));
+        while (!dni.equals("fin") || !nombre.equals("fin")) {
+            m.put(Calc_clave(dni), nombre);
+            System.out.println("Introduzca un nombre: ");
+            nombre = sc.nextLine();
             System.out.println("Introduzca un dni: ");
+            dni = sc.nextLine();
         }
+        System.out.println(m);
     }
     static Integer Calc_clave(String dni){
         Integer valor= 0;
