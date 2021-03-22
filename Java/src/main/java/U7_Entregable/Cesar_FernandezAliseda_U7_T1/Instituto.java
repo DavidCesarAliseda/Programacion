@@ -23,7 +23,6 @@ public class Instituto {
         if (alumnado.containsKey(u)){
             Set<AlumnoEntr> conjunto_alumnoEntrs = alumnado.get(u);
             conjunto_alumnoEntrs.add(a);
-
         }else{
             Set <AlumnoEntr> conjunto_alumnoEntrs = new HashSet<>();
             conjunto_alumnoEntrs.add(a);
@@ -97,7 +96,4 @@ public class Instituto {
         }
         System.out.println(mapa);
     }
-
-
-
 }

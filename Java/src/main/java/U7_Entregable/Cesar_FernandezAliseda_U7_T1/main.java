@@ -40,12 +40,13 @@ public class main {
 
         Alixar.mostrarAlumnosUnidad(u1);
 
-        Alixar.obtenerUnidadAlumno(a7.getId());
+       /* Alixar.obtenerUnidadAlumno(a7.getId());
 
         Alixar.mostrarTodosAlumnosOrdenados();
 
         Alixar.guardarAlumnos();
 
-        Alixar.cargarAlumnos();
+        Alixar.cargarAlumnos();*/
+
     }
 }
