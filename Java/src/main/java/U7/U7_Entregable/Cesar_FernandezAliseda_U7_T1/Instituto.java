@@ -1,4 +1,4 @@
-package U7_Entregable.Cesar_FernandezAliseda_U7_T1;
+package U7.U7_Entregable.Cesar_FernandezAliseda_U7_T1;
 
 import java.io.*;
 import java.util.*;
@@ -20,6 +20,7 @@ public class Instituto {
 
     //Metodos
     public void addAlumnoUnidad(Unidad u, AlumnoEntr a){
+
         if (alumnado.containsKey(u)){
             Set<AlumnoEntr> conjunto_alumnoEntrs = alumnado.get(u);
             conjunto_alumnoEntrs.add(a);
@@ -28,6 +29,7 @@ public class Instituto {
             conjunto_alumnoEntrs.add(a);
             alumnado.put(u, conjunto_alumnoEntrs);
         }
+
     }
 
     public void mostrarAlumnosUnidad(Unidad u) {
