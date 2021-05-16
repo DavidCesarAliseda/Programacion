@@ -8,7 +8,7 @@ public class principal_ex {
   public static void main(String[] args) {
     //
     Medico m1 = new Medico("Tomás", "Toledano", 12345, "Macarena");
-    Medico m2 = new Medico("Álvaro", "Arcelado", 98546, "Juan Ramón Jiménez");
+    Medico m2 = new Medico("Alvaro", "Arcelado", 98546, "Juan Ramón Jiménez");
     Medico m3 = new Medico("Carmen", "Zamora", 788456, "Virgen del Rocío");
 
     Paciente p1 = new Paciente("Jorge", 56, 67, true, m1, Cepa.L);

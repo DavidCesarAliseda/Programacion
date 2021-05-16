@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 
 public class Pinball {
-    private final static int RECORD = 0;
+    private static long RECORD = 0;
     private long score;
     private boolean isGaming;
 
@@ -22,7 +22,7 @@ public class Pinball {
         setGaming(false);
     }
 
-    public static int getRECORD() {
+    public static long getRECORD() {
         return RECORD;
     }
 
@@ -48,14 +48,15 @@ public class Pinball {
      */
 
     public void playGame(Person player){
+        setScore(0);
         startGame(player);
 
         if (isGaming){
             gaming();
+            Player player1 = (Player) player;
+            player1.setNewPersonalRecord(score);
         }
-
     }
-    //Comenzar la partida
 
     /**
      * Metodo para iniciar la partida
@@ -99,8 +100,11 @@ public class Pinball {
             topGame();
             showScore();
         }
-        System.out.println("GAME OVER");
-        System.out.println("Has conseguido "+score+", ¡Bien jugado!");
+
+        System.out.print("GAME OVER. ");
+        System.out.println("Has conseguido: "+score+" puntos.");
+        checkRecord();
+
     }
 
     /**
@@ -108,10 +112,24 @@ public class Pinball {
      */
 
     private void topGame(){
-       /* if (generateRandomNumber(0,100)){
+        int randomNum=generateRandomNumber(0,100);
+        int maxPoint=50;
+        int minPoint=25;
 
-
-        }*/
+       if (randomNum<=75){
+           score+=minPoint;
+           System.out.println("+25");
+       }else if(randomNum<=95){
+           score+=maxPoint;
+           System.out.println("+50");
+       }else{
+           int points;
+           for (int i = 0; i < generateRandomNumber(0,50); i++) {
+               points=generateRandomNumber(10,50);
+               score+=points;
+               System.out.println("+"+points);
+           }
+       }
     }
 
     /**
@@ -141,7 +159,7 @@ public class Pinball {
         int result = generateRandomNumber(0, 5);
         int maxPoint=250;
         int minPoint=40;
-        String side ="";
+        String side;
 
         if (result<=4){//80% posibilidad de caer
             System.out.println("+40");
@@ -151,7 +169,7 @@ public class Pinball {
             System.out.println("+250");
             score+=maxPoint;
         }
-
+        showScore();
         //Palancas
         result = generateRandomNumber(0, 1);
         side = (result<1?"izquierda":"derecha");//izquierda=0
@@ -169,7 +187,7 @@ public class Pinball {
             setGaming(false);
             System.out.println("Has fallado!!");
         }else{
-            int point = 0;
+            int point;
             for (int i = 0; i < generateRandomNumber(0, 10); i++) {
                 point =+generateRandomNumber(0, 3)*5;
                 score+=point;
@@ -177,8 +195,6 @@ public class Pinball {
             }
             System.out.println("Le has dado!!");
         }
-
-
     }
 
     /**
@@ -189,10 +205,12 @@ public class Pinball {
     private String playerReaction(){
         String side = "";
         try {
-            System.out.println("Inserte 0 para accionar la izquierda y 1 para accionar derecha.");
-            Scanner sc = new Scanner(System.in);
-            int dir = sc.nextInt();
-            side = (dir<1?"izquierda":"derecha");
+            do{
+                System.out.println("Inserte la palanca que desea accionar: izq/der");
+                Scanner sc = new Scanner(System.in);
+                side = sc.nextLine();
+            }while(!side.equals("izq") && !side.equals("der"));
+            side = (side.equals("izq")?"izquierda":"derecha");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -216,6 +234,27 @@ public class Pinball {
      */
 
     private void showScore(){
-        System.out.println("Puntuacion: "+getScore());
+        System.out.println("Puntuacion: "+score);
+    }
+
+    /**
+     * Metodo para comprobar si se ha superado el record local
+     * @return si ha superado o no el record.
+     */
+    private boolean checkRecord(){
+        boolean newRecord = Boolean.FALSE;
+        if (score>RECORD){
+            newRecord= Boolean.TRUE;
+            changeRecord(score);
+            System.out.println("Has conseguido un nuevo record local!!!");
+        }else{
+            System.out.println("Te has quedado a "+(RECORD-score)+" puntos del record.");
+        }
+
+        return newRecord;
+    }
+
+    private static void changeRecord(long score){
+        RECORD=score;
     }
 }

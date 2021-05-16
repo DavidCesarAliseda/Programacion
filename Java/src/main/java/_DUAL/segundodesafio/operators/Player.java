@@ -27,4 +27,10 @@ public class Player extends Person {
     public void setPersonalRecord(long personalRecord) {
         this.personalRecord = personalRecord;
     }
+    public void setNewPersonalRecord(long points){
+        if (points>personalRecord){
+            setPersonalRecord(points);
+            System.out.println(getName()+" has conseguido un nuevo record personal!!!");
+        }
+    }
 }

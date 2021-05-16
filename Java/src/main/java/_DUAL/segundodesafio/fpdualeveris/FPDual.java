@@ -25,5 +25,6 @@ public class FPDual {
         Pinball p1 = new Pinball();
         p1.playGame(o1);
         p1.playGame(player1);
+        p1.playGame(player1);
     }
 }
