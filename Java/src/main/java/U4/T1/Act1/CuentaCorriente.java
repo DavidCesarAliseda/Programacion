@@ -40,6 +40,7 @@ class CuentaCorriente {
         this.limite = -50;
     }
 /*Nombre*/
+
     public String getNombre() {
         return nombre;
     }
@@ -47,7 +48,8 @@ class CuentaCorriente {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-/*DNI*/
+
+    /*DNI*/
     public String getDNI() {
         return DNI;
     }
