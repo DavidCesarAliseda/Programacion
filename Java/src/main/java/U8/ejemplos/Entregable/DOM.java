@@ -38,15 +38,6 @@ public class DOM {
             Document doc = db.parse(new File("Ficheros/U8/menu.xml"));
             Node root = doc.getDocumentElement();
 
-            /*System.out.println("nombre");
-            String nombre = sc.nextLine();
-            System.out.println("precio");
-            String precio = sc.nextLine();
-            System.out.println("descripcion");
-            String descripcion = sc.nextLine();
-            System.out.println("calorias");
-            String calorias = sc.nextLine();*/
-
             Element food = doc.createElement("food");
 
             Element name = doc.createElement("name");
@@ -109,6 +100,7 @@ public class DOM {
             Node root = doc.getDocumentElement();
 
             NodeList nl = root.getChildNodes();
+
 
             for (int i = 0; i < nl.getLength() ; i++) {
                 if (nl.item(i).getNodeName().equals("food")){

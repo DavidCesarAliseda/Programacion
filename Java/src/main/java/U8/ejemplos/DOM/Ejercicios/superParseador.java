@@ -41,7 +41,6 @@ public class superParseador {
                             Node node = nodeMap.item(j);
                             Attr atributo = e.getAttributeNode(node.getNodeName());
                             System.out.print(" "+atributo.getNodeName()+"="+atributo.getValue());
-
                         }
                     }
 
@@ -58,7 +57,6 @@ public class superParseador {
 
                     System.out.println("\t</"+e.getTagName()+">");
                 }else if(nl.item(i).getNodeType() == Node.TEXT_NODE){
-
                 }
             }
             System.out.println("<"+root.getTagName()+"/>");
