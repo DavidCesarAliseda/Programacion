@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 
 public class Pinball {
-    private static long RECORD = 0;
+    private static long RECORD = Constant.INITIAL_SCORE;
     private long score;
     private boolean isGaming;
 
@@ -18,7 +18,7 @@ public class Pinball {
      */
 
     public Pinball() {
-        setScore(0);
+        setScore(Constant.INITIAL_SCORE);
         setGaming(false);
     }
 
@@ -48,7 +48,7 @@ public class Pinball {
      */
 
     public void playGame(Person player){
-        setScore(0);
+        setScore(Constant.INITIAL_SCORE);
         startGame(player);
 
         if (isGaming){
@@ -112,20 +112,18 @@ public class Pinball {
      */
 
     private void topGame(){
-        int randomNum=generateRandomNumber(0,100);
-        int maxPoint=50;
-        int minPoint=25;
+        int randomNum=generateRandomNumber(Constant.CERO,Constant.CIEN);
 
-       if (randomNum<=75){
-           score+=minPoint;
+       if (randomNum<=Constant.SETENTAYCINCO){
+           score+=Constant.MIN_POINT_TOP;
            System.out.println("+25");
-       }else if(randomNum<=95){
-           score+=maxPoint;
+       }else if(randomNum<=Constant.NOVENTAYCINCO){
+           score+=Constant.MAX_POINT_TOP;
            System.out.println("+50");
        }else{
            int points;
-           for (int i = 0; i < generateRandomNumber(0,50); i++) {
-               points=generateRandomNumber(10,50);
+           for (int i = Constant.CERO; i < generateRandomNumber(Constant.CERO,Constant.CINCUENTA); i++) {
+               points=generateRandomNumber(Constant.DIEZ,Constant.CINCUENTA);
                score+=points;
                System.out.println("+"+points);
            }
@@ -137,16 +135,14 @@ public class Pinball {
      */
 
     private void midGame(){
-        int result = generateRandomNumber(0, 5);
-        int maxPoint=500;
-        int minPoint=200;
+        int result = generateRandomNumber(Constant.CERO, Constant.CINCO);
 
-        if (result<=1){//20% posibilidad de caer
+        if (result<=Constant.UNO){//20% posibilidad de caer
             System.out.println("+200");
-           score+=minPoint;
+           score+=Constant.MIN_POINT_MID;
            //insertar topgame
-        }else if(result>=4){//80% posibilidad de caer
-            score+=maxPoint;
+        }else if(result>=Constant.CUATRO){//80% posibilidad de caer
+            score+=Constant.MAX_POINT_MID;
             System.out.println("+500");
         }
     }
@@ -156,22 +152,20 @@ public class Pinball {
      */
 
     private void botGame(){
-        int result = generateRandomNumber(0, 5);
-        int maxPoint=250;
-        int minPoint=40;
+        int result = generateRandomNumber(Constant.CERO, Constant.CINCO);
         String side;
 
-        if (result<=4){//80% posibilidad de caer
+        if (result<=Constant.CUATRO){//80% posibilidad de caer
             System.out.println("+40");
-            score+=minPoint;
+            score+=Constant.MIN_POINT_BOT;
             //insertar topgame
         }else{
             System.out.println("+250");
-            score+=maxPoint;
+            score+=Constant.MAX_POINT_BOT;
         }
         showScore();
         //Palancas
-        result = generateRandomNumber(0, 1);
+        result = generateRandomNumber(Constant.CERO, Constant.UNO);
         side = (result<1?"izquierda":"derecha");//izquierda=0
 
         switch (side){
@@ -183,13 +177,13 @@ public class Pinball {
                 break;
         }
 
-        if (!playerReaction().equals(side) || generateRandomNumber(0, 5)<1) {
+        if (!playerReaction().equals(side) || generateRandomNumber(Constant.CERO, Constant.CINCO)<Constant.UNO) {
             setGaming(false);
             System.out.println("Has fallado!!");
         }else{
             int point;
-            for (int i = 0; i < generateRandomNumber(0, 10); i++) {
-                point =+generateRandomNumber(0, 3)*5;
+            for (int i = 0; i < generateRandomNumber(Constant.CERO, Constant.DIEZ); i++) {
+                point =+generateRandomNumber(Constant.CERO, Constant.TRES)*Constant.CINCO;
                 score+=point;
                 System.out.println("+"+point);
             }
